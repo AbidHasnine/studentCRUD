@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StudentServiceImplementation implements StudentService{
+public class StudentServiceImplementation implements StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
@@ -19,7 +19,17 @@ public class StudentServiceImplementation implements StudentService{
     }
 
     @Override
-    public void saveStudent(Student student) {
-        this.studentRepository.save(student);
+    public Student saveStudent(Student student) {
+        return this.studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(long id) {
+        return studentRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deleteStudentById(long id) {
+        this.studentRepository.deleteById(id);
     }
 }
