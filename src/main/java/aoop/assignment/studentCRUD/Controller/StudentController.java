@@ -46,7 +46,6 @@ public class StudentController {
         if (student == null) {
             return ResponseEntity.notFound().build();
         }
-        
 
         student.setName(studentDetails.getName());
         student.setEmail(studentDetails.getEmail());

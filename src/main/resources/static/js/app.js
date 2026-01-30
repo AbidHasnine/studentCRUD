@@ -40,7 +40,7 @@ function displayStudents(students) {
                 <td>${student.email}</td>
                 <td>${student.department}</td>
                 <td>
-                    <button class="btn btn-sm btn-primary" onclick="editStudent(${student.id})">Edit</button>
+                    <button class="btn btn-sm btn-primary" onclick="editStudent(${student.id})">Update</button>
                     <button class="btn btn-sm btn-danger" onclick="deleteStudent(${student.id})">Delete</button>
                 </td>
             </tr>
